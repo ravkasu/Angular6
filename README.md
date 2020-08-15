@@ -1,5 +1,5 @@
 # Angular6
-examples for each concept
+examples for each concept (public)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.6.
 
