@@ -1,13 +1,13 @@
 <div class="row">
   <section class="col-12 mt-3">
     <form class="form-inline width5_auto">
-      <input (keyup.enter)="onPressEnter($event)" class="form-control mr-sm-2" type="search" placeholder="Year"
+      <input (change)="onPressEnter($event)" class="form-control mr-sm-2" type="search" placeholder="Year"
         aria-label="Year" pattern="/^(19[5-9]\d|20[0-4]\d|2050)$/" ng-model="">
       <!-- <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> -->
     </form>
-<div class="width5_auto" *ngIf="moviesTotal"><h3>Total List : {{moviesTotal}}</h3></div>
-    <div class="width5_auto" *ngFor="let list of moviesData">
-        <div *ngIf="list" class="shadow-sm p-3 mb-1 bg-white rounded">{{list.name}}</div>
+<div class="width5_auto" *ngIf="filterList.length"><h3>Total List : {{filterList.length}}</h3></div>
+    <div class="width5_auto" *ngFor="let list of filterList">
+        <div *ngIf="list" class="shadow-sm p-3 mb-1 bg-white rounded">{{list.Title}}</div>
     </div>
   </section>
 </div>

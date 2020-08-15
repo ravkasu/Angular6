@@ -26,8 +26,9 @@ export class ApiService {
   //         map(this.extractData)
   //       );
   // }
-  getfootball(): Observable<any> {
-    return this.http.get(this.url).pipe(
+  getfootball(value=''): Observable<any> {
+    const url = value? `${this.url}?year=${value}`:`${this.url}`;
+    return this.http.get(url).pipe(
       map(this.extractData)
     );
   }
@@ -37,8 +38,8 @@ export class ApiService {
     );
   }
 
-  getmoviedata(year): Observable<any> {
-    return this.http.get("https://jsonmock.hackerrank.com/api/movies?year="+year).pipe(
+  getmoviedata(): Observable<any> {
+    return this.http.get("https://jsonmock.hackerrank.com/api/movies").pipe(
       map(this.extractData)
     );
   }

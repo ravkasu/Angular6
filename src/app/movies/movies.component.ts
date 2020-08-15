@@ -11,38 +11,26 @@ export class MoviesComponent implements OnInit {
   moviesData:any;
   movies: any = [];
   movieyear: any = [];
+  filterList:any=[];
   inputVal:any;
   movielisterror:String;
 
   constructor(private apiService: ApiService) { }
 
   ngOnInit() {
+    this.apiService.getmoviedata().subscribe((data: any) => {
+      console.log(data);
+      this.moviesTotal = data.total;
+      this.moviesData = data.data;
+    });
   }
   onPressEnter($event){
     console.log("Entered text: ",$event.target.value);
     this.inputVal = $event.target.value;
+    this.filterList = this.moviesData.filter((movieObject)=>movieObject.Year === parseInt(this.inputVal))
   // } 
   // getmovieslist() {
-    this.apiService.getmoviedata($event).subscribe((data: any) => {
-      console.log(data);
-      this.moviesTotal = data.total;
-      this.moviesData = data.data;
-      // seperating the year from data
-      // this.movies = data.data.map(function (item) {
-      //   return item.Year;
-      // })
-      // console.log(this.movies);
-      // // unique year
-      // this.movieyear = Array.from(new Set(this.movies));
-      // console.log(this.movieyear);
-      // if(this.inputVal === this.movieyear){
-      //   alert("hi");
-      //   this.moviesData = data.data;
-      // }
-      // else{
-      //   this.movielisterror="No Records Found";
-      // }
-    });
+   
   }
 
 }

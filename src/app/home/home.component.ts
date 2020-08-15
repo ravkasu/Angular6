@@ -23,18 +23,18 @@ export class HomeComponent implements OnInit {
   getfootballlist(val) {
     console.log(val);
     // collecting click value and kept condition
-    this.apiService.getfootball().subscribe((data: any) => {
-      this.matches = data.total;
+    this.apiService.getfootball(val).subscribe((data: any) => {
+      this.matches = data.data;
       console.log(data.data);
-      data.data.forEach(function (x) {
-        var validateYear = x.year;
-        console.log(validateYear);
-        if (val === validateYear) {          
-            console.log(data);
-            this.footballlist=data.data;
-            console.log(this.footballlist);
-        }
-      });
+      // data.data.forEach(function (x) {
+      //   var validateYear = x.year;
+      //   console.log(validateYear);
+      //   if (val === validateYear) {          
+      //       console.log(data);
+      //       this.footballlist=data.data;
+      //       console.log(this.footballlist);
+      //   }
+      // });
     });
   }
   getfootballyear() {

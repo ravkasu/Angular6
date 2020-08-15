@@ -13,8 +13,8 @@
     </button>
   </form> -->
       <div class=" width5_auto">
-        <h3 *ngIf="matches">Total Matches : {{matches}}</h3>{{footballlist}}
-        <div class="" *ngFor="let list of footballlist">
+        <h3 *ngIf="matches">Total Matches : {{matches.length}}</h3>{{footballlist}}
+        <div class="" *ngFor="let list of matches">
           <div class="shadow-sm p-3 mb-5 bg-white rounded">{{list.name}}</div>
         </div>
       </div>
