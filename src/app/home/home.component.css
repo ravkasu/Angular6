@@ -1,0 +1,57 @@
+.width5_auto {
+    width: 50%;
+    margin: auto;
+  }
+  
+  ul,
+  li {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .years-list li {
+    cursor: pointer;
+    list-style-type: none;
+    /* background: #ffffff; */
+    margin: auto -15px;
+    margin-bottom: 1px;
+  }
+  
+  .years-list li a {
+    display: block;
+    padding: 10px;
+    cursor: pointer;
+    /* background: #ffffff; */
+    margin-bottom: 1px;
+    width: 100%;
+    color: black;
+  }
+  
+  
+  .years-list li a.active {
+    cursor: pointer;
+    list-style-type: none;
+    background: #ffffff;
+    margin-bottom: 1px;
+    width: 100%;
+    color: green !important;
+    display: block;
+    border-right:3px solid green;
+  }
+  
+  aside {
+    border-right: 1px solid #333;
+    position: fixed;
+    left: 0;
+    top: 55px;
+    bottom: 0;
+  }
+  
+  section {
+    position: fixed;
+    left: 16.666667%;
+    overflow: auto;
+    height: 100%;
+    padding-bottom: 2rem;
+  }
+  

@@ -1,0 +1,23 @@
+  <div class="row">
+    <aside class="col-2">
+      <ul class="years-list" *ngFor="let yearlist of footballyear">
+        <li><a class=""  [ngClass]="" (click)="getfootballlist(this.yearlist)"> {{yearlist}}</a></li>
+      </ul>
+    </aside>
+    <section class="col-10 mt-3">
+      <!-- <form class="form-inline width5_auto">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    <button type="button" class="Search" aria-label="Search">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </form> -->
+      <div class=" width5_auto">
+        <h3 *ngIf="matches">Total Matches : {{matches}}</h3>{{footballlist}}
+        <div class="" *ngFor="let list of footballlist">
+          <div class="shadow-sm p-3 mb-5 bg-white rounded">{{list.name}}</div>
+        </div>
+      </div>
+    </section>
+  </div>
+

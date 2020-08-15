@@ -1,0 +1,11 @@
+<div class="width5_auto">
+  <section class="mt-3">
+    <div class="form-inline">
+      <input class="form-control mr-sm-2" type="text" placeholder="Customer Name" [(ngModel)]="CustomerModel.CustomerName">
+      <button class="btn btn-outline-success my-2 my-sm-0" (click)="Add()" type="submit">Add Customer</button>
+    </div>
+    <div class="" *ngFor="let cust of CustomerModels">
+      <div class="shadow-sm p-3 mt-3 mb-1 bg-white rounded">{{cust.CustomerName}}</div>
+    </div>
+  </section>
+</div>
