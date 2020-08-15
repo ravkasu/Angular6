@@ -3,7 +3,7 @@ examples for each concept (public)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.6.
 
-##commands
+## Commands
 
 npm install @angular/cli@6.2.6
 
